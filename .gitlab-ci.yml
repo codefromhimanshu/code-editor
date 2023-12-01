@@ -9,10 +9,7 @@ test:
       - node_modules/
   script:
     - npm install
-    - npm test -- --outputFile=test-results.xml --json --testResultsProcessor="jest-junit"
-  artifacts:
-    reports:
-      junit: test-results.xml
+    - npm test
   only:
     - main
     - merge_requests
