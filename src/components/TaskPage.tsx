@@ -11,9 +11,19 @@ const TasksPage = (params) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [filter, setFilter] = useState('All');
 
-  
-  const filteredTasks = tasks.filter(task => filter === 'All' || task.status === filter);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortOrder, setSortOrder] = useState('asc');
 
+  const filteredTasks = tasks.filter(task => filter === 'All' || task.status === filter).filter(task => 
+    task.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    task.description.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+  .sort((a, b) => {
+    if (sortOrder === 'asc') {
+      return a.title.localeCompare(b.title);
+    }
+    return b.title.localeCompare(a.title);
+  });
   useEffect(() => {
     fetchTasks();
   }, []);
@@ -100,7 +110,9 @@ const TasksPage = (params) => {
       
       <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
           <div className="mb-4 sm:mb-0">
-            <select className="form-select block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500">
+            <select className="form-select block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                onChange={(e) => setFilter(e.target.value)}
+                >
               <option>All</option>
               <option>To Do</option>
               <option>In Progress</option>
@@ -114,6 +126,23 @@ const TasksPage = (params) => {
           Create Task ✏️ 
           </button>
       </div>
+      <div className="flex justify-between mb-4">
+      <input 
+        type="text" 
+        placeholder="Search tasks..." 
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="border p-2 rounded"
+      />
+      <select 
+        value={sortOrder}
+        onChange={(e) => setSortOrder(e.target.value)}
+        className="border p-2 rounded"
+      >
+        <option value="asc">Sort Ascending</option>
+        <option value="desc">Sort Descending</option>
+      </select>
+    </div>
 
      
       <CreateTaskModal

@@ -10,11 +10,6 @@ interface TaskListProps {
 
 const TaskList: React.FC<TaskListProps> = ({ tasks, onUpdate, onDelete }) => {
   const [selectedTask, setSelectedTask] = useState(null);
-  // const [filter, setFilter] = useState('All');
-
-  
-  // const filteredTasks = tasks.filter(task => filter === 'All' || task.status === filter);
-
   const getStatusStyles = (status: string) => {
     switch (status) {
       case 'Done':

@@ -1,0 +1,15 @@
+test:
+  stage: test
+  image: node:latest
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm install
+    - npm test -- --outputFile=test-results.xml --json --testResultsProcessor="jest-junit"
+  artifacts:
+    reports:
+      junit: test-results.xml
+  only:
+    - master
+    - merge_requests
