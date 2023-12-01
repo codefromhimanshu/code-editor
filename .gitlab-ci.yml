@@ -14,5 +14,5 @@ test:
     reports:
       junit: test-results.xml
   only:
-    - master
+    - main
     - merge_requests
