@@ -15,6 +15,11 @@ export async function middleware(req) {
   if (pathname.includes('/api/auth') || pathname.includes('/api/register') || token) {
     return NextResponse.next();
   }
+  console.log(token)
+  console.log(pathname)
+  if (token && pathname == '/') {
+    return NextResponse.redirect('/tasks');
+  }
 
   // Otherwise, redirect to login
   if (!token && pathname !== '/login') {

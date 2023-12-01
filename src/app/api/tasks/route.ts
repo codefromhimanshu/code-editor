@@ -3,7 +3,6 @@ import { type NextRequest } from 'next/server'
 import { getServerSession } from "next-auth"
 import { authOptions } from "../auth/[...nextauth]/route"
 import {User, Task} from '../../../models';
-const { Op } = require("sequelize");
 
 export async function GET(request: Request) {
   

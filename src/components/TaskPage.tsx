@@ -108,8 +108,8 @@ const TasksPage = (params) => {
   return (
     <div className="container">
       
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
-          <div className="mb-4 sm:mb-0">
+      <div className="flex flex-row justify-between items-center mb-4">
+          <div className="sm:mb-0">
             <select className="form-select block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
                 onChange={(e) => setFilter(e.target.value)}
                 >

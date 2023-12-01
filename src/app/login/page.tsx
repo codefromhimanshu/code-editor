@@ -61,13 +61,13 @@ const LoginPage = () => {
         </div>
         <button
           type="submit"
-          className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          className="mb-6 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
         >
           Sign in
         </button>
         <a
           href="/signup"
-          className="ml-6 bg-white text-cyan-500 hover:bg-cyan-600 hover:text-white focus:ring-4 focus:ring-cyan-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          className="mb-6 ml-6 bg-white text-cyan-500 hover:bg-cyan-600 hover:text-white focus:ring-4 focus:ring-cyan-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
         >
           Register
         </a>

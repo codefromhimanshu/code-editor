@@ -5,13 +5,14 @@ exports[`TasksPage renders correctly 1`] = `
   className="container"
 >
   <div
-    className="flex flex-col sm:flex-row justify-between items-center mb-4"
+    className="flex flex-row justify-between items-center mb-4"
   >
     <div
-      className="mb-4 sm:mb-0"
+      className="sm:mb-0"
     >
       <select
         className="form-select block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+        onChange={[Function]}
       >
         <option>
           All
@@ -33,6 +34,33 @@ exports[`TasksPage renders correctly 1`] = `
     >
       Create Task ✏️
     </button>
+  </div>
+  <div
+    className="flex justify-between mb-4"
+  >
+    <input
+      className="border p-2 rounded"
+      onChange={[Function]}
+      placeholder="Search tasks..."
+      type="text"
+      value=""
+    />
+    <select
+      className="border p-2 rounded"
+      onChange={[Function]}
+      value="asc"
+    >
+      <option
+        value="asc"
+      >
+        Sort Ascending
+      </option>
+      <option
+        value="desc"
+      >
+        Sort Descending
+      </option>
+    </select>
   </div>
   <div
     className="space-y-4"
