@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskList renders correctly with tasks 1`] = `
+<div
+  className="space-y-4"
+>
+  <div
+    className="flex justify-between items-center bg-white p-4 rounded shadow"
+    onClick={[Function]}
+  >
+    <span
+      className=" flex-grow font-semibold"
+    >
+      Test Task 1
+    </span>
+    <span
+      className=" flex-grow"
+    >
+      Description 1
+    </span>
+    <span
+      className="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-gray-500 text-white"
+    >
+      To Do
+    </span>
+  </div>
+  <div
+    className="flex justify-between items-center bg-white p-4 rounded shadow"
+    onClick={[Function]}
+  >
+    <span
+      className="line-through flex-grow font-semibold"
+    >
+      Test Task 2
+    </span>
+    <span
+      className="line-through flex-grow"
+    >
+      Description 2
+    </span>
+    <span
+      className="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-green-500 text-white"
+    >
+      Done
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TaskList renders no tasks message when empty 1`] = `
+<div
+  className="space-y-4"
+>
+  <div
+    className="flex items-center""
+  >
+    <span>
+       No Task present
+    </span>
+  </div>
+</div>
+`;

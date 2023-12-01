@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateTaskModal does not render when not open 1`] = `null`;
+
+exports[`CreateTaskModal renders correctly when open 1`] = `
+<div
+  className="fixed inset-0 z-50 overflow-auto bg-smoke-light flex"
+>
+  <div
+    className="relative p-8 bg-white w-full max-w-md m-auto flex-col flex rounded-lg"
+  >
+    <span
+      className="absolute top-0 right-0 p-4"
+    >
+      <button
+        onClick={[MockFunction]}
+      >
+        ×
+      </button>
+    </span>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="mb-5"
+      >
+        <label
+          className="font-semibold mb-2 block"
+          htmlFor="title"
+        >
+          Task Title
+        </label>
+        <input
+          className="border py-2 px-3 text-grey-darkest w-full"
+          id="title"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="mb-5"
+      >
+        <label
+          className="font-semibold mb-2 block"
+          htmlFor="description"
+        >
+          Description
+        </label>
+        <textarea
+          className="border py-2 px-3 text-grey-darkest w-full"
+          id="description"
+          onChange={[Function]}
+          required={true}
+          value=""
+        />
+      </div>
+      <div
+        className="flex justify-end"
+      >
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          type="submit"
+        >
+          Create Task
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
